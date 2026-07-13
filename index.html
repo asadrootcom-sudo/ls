@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>تطوير المهارات للقاده</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="loader"><div class="loader-ring"></div><div class="loader-text">تطوير المهارات للقاده</div></div>
+        <canvas id="confetti"></canvas>
+        <div class="toast" id="toast"></div>
+
+        <nav id="navbar">
+        <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">تطوير المهارات للقاده</div>
+        <div class="nav-search">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="searchInput" placeholder="ابحث عن مهارة..." autocomplete="off">
+        </div>
+        <div class="nav-right">
+            <div class="nav-progress">
+            <div class="nav-progress-bar"><div class="nav-progress-fill" id="globalProgress" style="width:0%"></div></div>
+            <span id="globalProgressText">0%</span>
+            </div>
+            <button class="nav-btn" id="themeToggle" title="تبديل المظهر"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
+        </div>
+        </nav>
+
+        <section id="hero">
+        <div class="hero-bg"><div class="hero-blob"></div><div class="hero-blob"></div><div class="hero-blob"></div></div>
+        <div class="hero-content">
+            <h1 class="hero-title">تطوير المهارات للقاده</h1>
+            <p class="hero-subtitle">رحلتك كقائد لتجهيز نفسك تبدأ من هنا</p>
+            <div class="hero-stats">
+            <div class="hero-stat"><div class="hero-stat-num">15</div><div class="hero-stat-label">مهارة</div></div>
+            <div class="hero-stat"><div class="hero-stat-num">96</div><div class="hero-stat-label">درس</div></div>
+            <div class="hero-stat"><div class="hero-stat-num" id="completedStat">0</div><div class="hero-stat-label">مكتمل</div></div>
+            </div>
+        </div>
+        </section>
+
+        <section id="skills"><div class="skills-grid" id="skillsGrid"></div></section>
+
+        <section id="quote">
+        <div class="quote-card">
+            <p class="quote-text" id="quoteText"></p>
+            <p class="quote-author" id="quoteAuthor"></p>
+        </div>
+        </section>
+
+        <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">تطوير المهارات</div>
+            <div class="footer-links"><a href="#">الرئيسية</a><a href="#">المهارات</a><a href="#">عن المنصة</a><a href="#">تواصل معنا</a><a href="#">سياسة الخصوصية</a></div>
+            <div class="footer-copy">© 2026 <a href="https://www.asadroot.com/">Asad Root</a> . جميع الحقوق محفوظة.</div>
+        </div>
+        </footer>
+
+        <button id="back-top"><i data-lucide="chevron-up" style="width:20px;height:20px"></i></button>
+
+        <div id="panel-overlay"></div>
+        <div id="panel">
+        <div class="panel-header">
+            <div class="panel-top">
+            <div class="panel-title-wrap">
+                <div class="panel-icon" id="panelIcon"><i data-lucide="book-open"></i></div>
+                <h2 class="panel-title" id="panelTitle"></h2>
+            </div>
+            <button class="panel-close" id="panelClose"><i data-lucide="x" style="width:18px;height:18px"></i></button>
+            </div>
+            <div class="panel-progress-bar"><div class="panel-progress-fill" id="panelProgressFill"></div></div>
+            <div class="panel-progress-info">
+            <span id="panelProgressText">0% مكتمل</span>
+            <span id="panelLessonsCount">0/0 دروس</span>
+            </div>
+        </div>
+        <div class="panel-body" id="panelBody"></div> 
+             
+        </div>
+        
+    </body>
+    <script src="script.js"></script>
+</html>
